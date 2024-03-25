@@ -1,0 +1,26 @@
+/* Global styles */
+:root {
+    /* Primary */
+    --purple: #854dff;
+    --lt-red: #ff5757;
+
+    /* Neutral */
+    --white: #ffffff;
+    --off-white: #f0f0f0;
+    --lt-grey: #dbdbdb;
+    --smoke: #716f6f;   
+    --off-blk: #141414;
+}
+
+body, h1, h2, h3, h4, h5, h6, p,
+dl, dd, blockquote, figure {
+    margin: 0;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+/* Mobile styles */
