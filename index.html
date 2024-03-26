@@ -6,22 +6,43 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400i,700,800i">  
-  <title>Age calculator app | How long have you been alive? Find out precisely how old you are!</title>
+  <title>Age calculator app | Find out exactly how old you are!</title>
 </head>
 <body>
+  <main class="age-calc">
+    <section class="date-fields">
+      <div class="input">
+        <label class="field-title" for="day-field">DAY</label>
+        <input id="day" type="text" name="day-field" placeholder="DD">
+        <label class="error" for="day-field"></label>
+      </div>
 
-  Day
-  DD
+      <div class="input">
+        <label class="field-title" for="month-field">MONTH</label>
+        <input id="month" type="text" name="month-field" placeholder="MM">
+        <label class="error" for="month-field"></label>
+      </div>
 
-  Month
-  MM
+      <div class="input">
+        <label class="field-title" for="year-field">YEAR</label>
+        <input id="year" type="text" name="year-field" placeholder="YYYY">
+        <label class="error" for="year-field"></label>
+      </div>
 
-  Year
-  YYYY
+    </section>
 
-  -- years
-  -- months
-  -- days
-  
+    <div class="icon-btn">
+      <div class="btn" role="button">
+        <img class="arrow" src="./images/icon-arrow.svg" alt="Downward pointing arrow icon.">
+      </div>
+      <hr class="btn-divider">
+    </div>
+
+    <section class="results">
+      <h2><span id="years" class="output">--</span> years</h2>
+      <h2><span id="months" class="output">--</span> months</h2>
+      <h2><span id="days" class="output">--</span> days</h2>
+    </section>
+  </main> 
 </body>
 </html>
