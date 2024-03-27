@@ -24,6 +24,14 @@ body {
     background-color: var(--off-white);
 }
 
+h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 120%;
+    color: var(--off-blk);
+}
+
 /* Mobile styles */
 .age-calc {
     display: flex;
@@ -37,17 +45,48 @@ body {
 .date-fields {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 2.25rem;
+}
+
+.field-title {
+    font-size: .75rem;
+    color: var(--smoke);
+    letter-spacing: .24rem;
 }
 
 .input {
     display: flex;
     flex-direction: column;
+    gap: .25rem;
 }
 
 input {
     width: 100%;
     height: 3rem;
+    border: 1px solid var(--lt-grey);
+    outline: none;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    color: var(--off-blk);
+    font-family: 'Poppins';
+    font-size: 1.25rem;
+    padding-left: 1rem;
+}
+
+input:hover {
+    border: 1px solid var(--purple);
+}
+
+input:focus {
+    border: 1px solid var(--purple);
+}
+
+::placeholder {
+    font-size: 1.25rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: var(--smoke);
 }
 
 .icon-btn {
@@ -71,11 +110,21 @@ input {
     height: 4rem;
     border-radius: 10rem;
     z-index: 2;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--off-blk);
+    transition: 250ms ease-out;
 }
 
 .arrow {
     width: 1.75rem;
     height: auto;
+}
+
+hr {
+    border: 1px solid var(--lt-grey);
 }
 
 .results {
