@@ -136,4 +136,10 @@ hr {
     color: var(--purple);
 }
 
-
+.error {
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--lt-red);
+    margin-top: .25rem;
+}
