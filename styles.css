@@ -22,6 +22,10 @@ body {
     font-family: 'Poppins';
     font-weight: 700;
     background-color: var(--off-white);
+    margin: 5.5rem 1rem 1rem 1rem;
+    
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
@@ -36,8 +40,9 @@ h2 {
 .age-calc {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+    border-radius: 1.5rem 1.5rem 6rem 1.5rem;
     background-color: var(--white);
     color: var(--off-blk);
 }
@@ -142,4 +147,12 @@ hr {
     font-style: italic;
     color: var(--lt-red);
     margin-top: .25rem;
+}
+
+.error-field {
+    border: 1px solid var(--lt-red);
+}
+
+.error-title {
+    color: var(--lt-red);
 }
