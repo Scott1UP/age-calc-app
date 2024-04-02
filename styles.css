@@ -156,3 +156,109 @@ hr {
 .error-title {
     color: var(--lt-red);
 }
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+    }
+
+    .age-calc {
+        margin-left: 20%;
+        margin-right: 20%;
+        gap: 0;
+        padding: 2.5rem;
+        border-radius: 1.5rem 1.5rem 12rem 1.5rem;
+    }
+
+    .date-fields {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .field-title {
+        font-size: .835rem;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    input {
+        border: 1px solid var(--lt-grey);
+        outline: none;
+        border-radius: .5rem;
+        cursor: pointer;
+    
+        color: var(--off-blk);
+        font-family: 'Poppins';
+        font-size: 2rem;
+        padding: .75rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    ::placeholder {
+        font-size: 2rem;
+        font-family: 'Poppins';
+        font-weight: 700;
+        color: var(--smoke);
+    }
+    
+    .icon-btn {
+        justify-content: flex-end;
+        margin-top: -.735rem;
+    }
+
+    .btn {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 10rem;
+    }
+
+    .arrow {
+        width: 3rem;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+        font-weight: 800;
+        font-style: italic;
+        line-height: 110%;
+        color: var(--off-blk);
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1088px) {
+    .age-calc {
+        padding: 3.5rem 3.5rem 3rem 3.5rem;
+    }
+    
+    .date-fields {
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+        gap: 1.75rem;
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        font-size: 6.5rem;
+        font-weight: 800;
+        font-style: italic;
+        line-height: 110%;
+        color: var(--off-blk);
+    }
+}
