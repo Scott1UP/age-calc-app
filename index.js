@@ -56,7 +56,7 @@ const isDayValid = (value) => {
     return value !== "" && parseInt(value) > 0 && parseInt(value) <= 31;
 }
 
-function isValidDate(year, month, day) {
+const isValidDate = (year, month, day) => {
     const date = new Date(year, month - 1, day); // month is 0-indexed in JavaScript Date object
     if (
         date.getFullYear() === parseInt(year) &&
