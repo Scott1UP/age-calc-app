@@ -56,6 +56,19 @@ const isDayValid = (value) => {
     return value !== "" && parseInt(value) > 0 && parseInt(value) <= 31;
 }
 
+function isValidDate(year, month, day) {
+    const date = new Date(year, month - 1, day); // month is 0-indexed in JavaScript Date object
+    if (
+        date.getFullYear() === parseInt(year) &&
+        date.getMonth() === parseInt(month) - 1 &&
+        date.getDate() === parseInt(day)
+    ) {
+        return { isValid: true };
+    } else {
+        return { isValid: false, errorMessage: "Invalid date" };
+    }
+}
+
 button.addEventListener("click", event => {
     event.preventDefault();
 
@@ -67,9 +80,19 @@ button.addEventListener("click", event => {
     const dayValid = validateInput(dayInput, "error-day-label", "day", "day-title", "Must be a valid day", isDayValid);
 
     if (yearValid && monthValid && dayValid) {
-        document.getElementById("years").textContent = difference.years;
-        document.getElementById("months").textContent = difference.months;
-        document.getElementById("days").textContent = difference.days;
+        const dateValidation = isValidDate(yearInput.value, monthInput.value, dayInput.value);
+        if (dateValidation.isValid) {
+            document.getElementById("years").textContent = difference.years;
+            document.getElementById("months").textContent = difference.months;
+            document.getElementById("days").textContent = difference.days;
+        } else {
+            document.getElementById("years").textContent = "-";
+            document.getElementById("months").textContent = "-";
+            document.getElementById("days").textContent = "-";
+            document.getElementById("error-day-label").textContent = dateValidation.errorMessage;
+            document.getElementById("day").classList.add("error-field");
+            document.getElementById("day-title").classList.add("error-title");
+        }
     } else {
         document.getElementById("years").textContent = "-";
         document.getElementById("months").textContent = "-";
